@@ -94,7 +94,7 @@ end
 if S.GUI.Bonsai
     BpodSystem.Pause=1;
     disp('Adjust ROI - resume when ready');
-    success=Bpod2Bonsai_Quentin()
+    success=Bpod2Bonsai('Amy')
     HandlePauseCondition;
 end
 %% Main trial loop
