@@ -1,4 +1,4 @@
-function CuedOutcome
+function CuedOutcome_AC
 %Functions used in this protocol:
 %"CuedReward_Phase": specify the phase of the training
 %"WeightedRandomTrials" : generate random trials sequence
