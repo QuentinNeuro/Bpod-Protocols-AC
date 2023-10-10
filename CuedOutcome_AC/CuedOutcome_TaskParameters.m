@@ -10,7 +10,7 @@ global S
     S.Names.Rig=Param.rig;
 
 %% General Parameters    
-    S.GUI.Phase = 2;
+    S.GUI.Phase = 4;
     S.GUIMeta.Phase.Style='popupmenu';
     S.GUIMeta.Phase.String=S.Names.Phase;
     S.GUI.eZTrials=0;
@@ -44,8 +44,8 @@ global S
     S.GUIMeta.RedChannel.String='Auto';    
     S.GUIPanels.Recording={'Bonsai','Wheel','Photometry','DbleFibers','Isobestic405','RedChannel'};
      
-    S.GUI.NidaqMin=-5;
-    S.GUI.NidaqMax=10;
+    S.GUI.NidaqMin=-10;
+    S.GUI.NidaqMax=50;
     S.GUIPanels.Plot={'NidaqMin','NidaqMax'};
     
     S.GUITabs.General={'Plot','Recording','Task'};
@@ -54,7 +54,7 @@ global S
     S.GUI.MaxTrials=200;
     S.GUI.PreCue=3;
     S.GUI.CueDuration=0.5;
-    S.GUI.Delay=2;
+    S.GUI.Delay=3;
     S.GUI.DelayIncrement=0;
     S.GUI.PostOutcome=5;
     S.GUI.TimeNoLick=2;
