@@ -24,7 +24,7 @@ global S
     S.GUIMeta.CueType.String=S.Names.Cue;
     S.GUIPanels.Task={'Phase','CueType','eZTrials','noLickPeriod'};
      
-    S.GUI.Bonsai=1;
+    S.GUI.Bonsai=0;
     S.GUIMeta.Bonsai.Style='checkbox';
     S.GUIMeta.Bonsai.String='Auto';
     S.GUI.Wheel=0;

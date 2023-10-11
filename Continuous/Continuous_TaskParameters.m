@@ -80,9 +80,9 @@ global S
     S.GUI.RewardValve=1;
     S.GUIMeta.RewardValve.Style='popupmenu';
     S.GUIMeta.RewardValve.String={1,2,3,4,5,6};
-    S.GUI.SmallReward=2;
-    S.GUI.InterReward=5;
-    S.GUI.LargeReward=8;
+    S.GUI.SmallReward=1;
+    S.GUI.InterReward=3;
+    S.GUI.LargeReward=5;
     S.GUI.PunishValve=2;
 	S.GUIMeta.PunishValve.Style='popupmenu';
     S.GUIMeta.PunishValve.String={1,2,3,4,5,6};
