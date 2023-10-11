@@ -103,8 +103,34 @@ for currentTrial = 1:S.GUI.MaxTrials
     S = BpodParameterGUI('sync', S); % Sync parameters with BpodParameterGUI plugin 
 %% Initialize current trial parameters
 	S.Cue       =	S.TrialsMatrix(TrialSequence(currentTrial),3);
-	S.Delay     =	S.TrialsMatrix(TrialSequence(currentTrial),4)+(S.GUI.DelayIncrement*(currentTrial-1));
-	S.Valve     =	S.TrialsMatrix(TrialSequence(currentTrial),5);
+	S.Delay     =	S.TrialsMatrix(TrialSequence(currentTrial),4)+ (S.GUI.DelayIncrement*(currentTrial-1));
+	
+    if S.Names.Phase{S.GUI.Phase} == 'Train3C_vDelay'
+        
+        pd = makedist('exponential', .2);
+        pd = truncate(pd, 0, 1);
+        tau = random(pd);
+        switch S.TrialsMatrix(TrialSequence(currentTrial), 1) 
+            case 1
+                S.Delay = S.Delay - tau;
+            case 2
+                S.Delay = S.Delay;
+            case 3
+                S.Delay = S.Delay + tau;
+            case 4
+                S.Delay = S.Delay - tau;
+            case 5
+                S.Delay = S.Delay;
+            case 6
+                S.Delay = S.Delay + tau;
+            case 7 
+                S.Delay = S.Delay;
+        end  
+        end
+
+        
+    
+    S.Valve     =	S.TrialsMatrix(TrialSequence(currentTrial),5);
 	S.Outcome   =   S.TrialsMatrix(TrialSequence(currentTrial),6);
     S.ITI = 100;
     while S.ITI > 3 * S.GUI.ITI
