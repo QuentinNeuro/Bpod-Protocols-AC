@@ -3,7 +3,7 @@ function CuedOutcome_TaskParameters(Param)
 %
 
 global S
-    S.Names.Phase={'Habituation','Hab-RewardSize','Train3C','Train3C_vDelay','Test3C-RewardSize','Train2C','Test2C-vDelay'};
+    S.Names.Phase={'Habituation','Hab-RewardSize','Train3C','Train3C_vDelay','Train3C_Reversal', 'Test3C-RewardSize','Train2C','Test2C-vDelay'};
     S.Names.Cue={'Sweep','Tones','Visual','Odors'};
     S.Names.StateToZero={'CueDelivery','PostOutcome'};
     S.Names.StateToStim={'Baseline','CueDelivery','Delay','Outcome'};

@@ -105,10 +105,10 @@ for currentTrial = 1:S.GUI.MaxTrials
 	S.Cue       =	S.TrialsMatrix(TrialSequence(currentTrial),3);
 	S.Delay     =	S.TrialsMatrix(TrialSequence(currentTrial),4)+ (S.GUI.DelayIncrement*(currentTrial-1));
 	
-    if S.Names.Phase{S.GUI.Phase} == 'Train3C_vDelay'
+    if strcmp(S.Names.Phase{S.GUI.Phase},'Train3C_vDelay')
         
-        pd = makedist('exponential', .2);
-        pd = truncate(pd, 0, 1);
+        pd = makedist('exponential', .5);
+        pd = truncate(pd, 0, 2);
         tau = random(pd);
         switch S.TrialsMatrix(TrialSequence(currentTrial), 1) 
             case 1
